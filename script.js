@@ -32,7 +32,7 @@ function acordar() {
   }
   
   function verMensagens() {
-    let escolha = prompt("O que deseja fazer após ver as mensagens?\n1 - Responder mensagens importantes\n2 - Checar e-mails\n3 - Verificar notícias");
+    let escolha = prompt("O que deseja fazer após ver as mensagens?\n1 - Responder mensagens importantes\n2 - Checar e-mails\n3 - Verificar redes sociais");
   
     switch (escolha) {
       case '1':
