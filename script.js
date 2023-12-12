@@ -66,6 +66,65 @@ function acordar() {
         alert("Escolha inválida!");
     }
   }
+
+  function cafeDaManha() {
+    let escolha = prompt("O que deseja comer no café da manhã?\n1 - Pão com queijo\n2 - Frutas\n3 - Cereal com leite");
+  
+    switch (escolha) {
+      case '1':
+        alert("Você está comendo pão com queijo no café da manhã.");
+        break;
+      case '2':
+        alert("Você está comendo frutas no café da manhã.");
+        break;
+      case '3':
+        alert("Você está comendo cereal com leite no café da manhã.");
+        break;
+      default:
+        alert("Escolha inválida!");
+    }
+  }
+  
+  function estudar() {
+    let escolha = prompt("Oque você estudar?\n1 - JavaScript\n2 - TypeScript\n3 - React");
+  
+    switch (escolha) {
+      case '1':
+        alert("Você está estudando JavaScript.");
+        break;
+      case '2':
+        alert("Você está estudando TypeScript.");
+        break;
+      case '3':
+        alert("Você está estudando React.");
+        break;
+      default:
+        alert("Escolha inválida!");
+    }
+  }
+  
+  function trabalhar() {
+    let escolha = prompt("O que deseja fazer durante o trabalho?\n1 - Resolver projetos pendentes\n2 - Participar de uma reunião\n3 - Iniciar um novo projeto");
+  
+    switch (escolha) {
+      case '1':
+        alert("Você está resolvendo projetos pendentes no trabalho.");
+        break;
+      case '2':
+        alert("Você está participando de uma reunião no trabalho.");
+        break;
+      case '3':
+        alert("Você está iniciando um novo projeto no trabalho.");
+        break;
+      default:
+        alert("Escolha inválida!");
+    }
+  }
   
   acordar();
-  
+  continuarDeitado();
+  verMensagens();
+  levantar();
+  cafeDaManha();
+  estudar();
+  trabalhar();
