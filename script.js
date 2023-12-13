@@ -86,7 +86,7 @@ function acordar() {
   }
   
   function estudar() {
-    let escolha = prompt("Oque você estudar?\n1 - JavaScript\n2 - TypeScript\n3 - React");
+    let escolha = prompt("Oque você quer estudar?\n1 - JavaScript\n2 - TypeScript\n3 - React");
   
     switch (escolha) {
       case '1':
@@ -120,6 +120,24 @@ function acordar() {
         alert("Escolha inválida!");
     }
   }
+
+  function voltarParaCasa() {
+    let escolha = prompt("Acabou o seu trabalho! O que deseja fazer na volta para casa?\n1 - Passar no mercado? \n2 - Comprar um hamburguer para jantar?\n3 - Ir direto para casa?");
+  
+    switch (escolha) {
+      case '1':
+        alert("Você está indo passar no mercado no caminho para casa. Encontrou um antigo amigo e tiveram uma conversa animada!");
+        break;
+      case '2':
+          alert("Ao comprar o hambúrguer, você achou um bilhete premiado na embalagem!");
+          break;
+      case '3':
+        alert("Você está indo direto para casa, mas no caminho presenciou um lindo pôr do sol!");
+        break;
+      default:
+        alert("Escolha inválida!");
+    }
+  }
   
   acordar();
   continuarDeitado();
@@ -128,3 +146,4 @@ function acordar() {
   cafeDaManha();
   estudar();
   trabalhar();
+  voltarParaCasa()
