@@ -138,6 +138,24 @@ function acordar() {
         alert("Escolha inválida!");
     }
   }
+
+  function momentoDeLazer() {
+    let escolha = prompt("Agora é hora de aproveitar o seu momento, o que deseja fazer?\n1 - Praticar algum exercício físico \n2 - Ler um livro\n3 - Descansar com a família");
+  
+    switch (escolha) {
+      case '1':
+        alert("Você está liberando endorfina, força!!");
+        break;
+      case '2':
+          alert("Silêncio! Você está se concentrando e expandindo seus conhecimentos.");
+          break;
+      case '3':
+        alert("Você está botando o papo em dia e contando tudo que você fez hoje, não esqueça de contar o que aconteceu na volta pra casa!");
+        break;
+      default:
+        alert("Escolha inválida!");
+    }
+  }
   
   acordar();
   continuarDeitado();
@@ -146,4 +164,5 @@ function acordar() {
   cafeDaManha();
   estudar();
   trabalhar();
-  voltarParaCasa()
+  voltarParaCasa();
+  momentoDeLazer();
