@@ -13,6 +13,7 @@ function acordar() {
         break;
       default:
         alert("Escolha inválida!");
+        acordar();
     }
   }
   
@@ -28,7 +29,9 @@ function acordar() {
         break;
       default:
         alert("Escolha inválida!");
+        continuarDeitado();
     }
+    levantar();
   }
   
   function verMensagens() {
@@ -36,17 +39,19 @@ function acordar() {
   
     switch (escolha) {
       case '1':
-        alert("Você está respondendo mensagens importantes.");
+        alert("Você respondeu as mensagens importantes.");
         break;
       case '2':
         alert("Você está checando seus e-mails e viu que tem uma oportunidade de entrevista de emprego.");
         break;
       case '3':
-        alert("Você está verificando as redes sociais.");
+        alert("Você verificou as redes sociais e agora está atrasado!");
         break;
       default:
         alert("Escolha inválida!");
+        verMensagens();
     }
+    levantar();
   }
   
   function levantar() {
@@ -54,17 +59,19 @@ function acordar() {
   
     switch (escolha) {
       case '1':
-        alert("Você foi tomar banho.");
+        alert("Você tomou banho.");
         break;
       case '2':
         alert("Você está escovando os dentes.");
         break;
       case '3':
-        alert("Você está preparando o café da manhã.");
+        alert("Você vai preparar o café da manhã.");
         break;
       default:
         alert("Escolha inválida!");
+        levantar();
     }
+    cafeDaManha();
   }
 
   function cafeDaManha() {
@@ -82,11 +89,13 @@ function acordar() {
         break;
       default:
         alert("Escolha inválida!");
+        cafeDaManha();
     }
+    estudar()
   }
   
   function estudar() {
-    let escolha = prompt("Oque você quer estudar?\n1 - JavaScript\n2 - TypeScript\n3 - React");
+    let escolha = prompt("Ocque você quer estudar?\n1 - JavaScript\n2 - TypeScript\n3 - React");
   
     switch (escolha) {
       case '1':
@@ -100,7 +109,29 @@ function acordar() {
         break;
       default:
         alert("Escolha inválida!");
+        estudar();
     }
+    almocar();
+  }
+
+  function almocar() {
+    let escolha = prompt("O que você quer para o almoço? \n1 - Comprar ingredientes e fazer algo do zero? \n2 - Comer o que sobrou de ontem? \n3 - Pedir um Ifood?");
+  
+    switch (escolha) {
+      case '1':
+        alert("Você comprou ingredientes para fazer algo do zero.");
+        break;
+      case '2':
+        alert("Você comeu o que sobrou de ontem.");
+        break;
+      case '3':
+        alert("Você pediu comida pelo Ifood.");
+        break;
+      default:
+        alert("Escolha inválida!");
+        almocar();
+    }
+    trabalhar();
   }
   
   function trabalhar() {
@@ -118,7 +149,9 @@ function acordar() {
         break;
       default:
         alert("Escolha inválida!");
+        trabalhar();
     }
+    voltarParaCasa();
   }
 
   function voltarParaCasa() {
@@ -136,7 +169,9 @@ function acordar() {
         break;
       default:
         alert("Escolha inválida!");
+        voltarParaCasa();
     }
+    momentoDeLazer();
   }
 
   function momentoDeLazer() {
@@ -154,15 +189,8 @@ function acordar() {
         break;
       default:
         alert("Escolha inválida!");
+        momentoDeLazer();
     }
   }
   
   acordar();
-  continuarDeitado();
-  verMensagens();
-  levantar();
-  cafeDaManha();
-  estudar();
-  trabalhar();
-  voltarParaCasa();
-  momentoDeLazer();
