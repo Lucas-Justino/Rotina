@@ -228,6 +228,11 @@ function acordar() {
         alert("Escolha inválida!");
         momentoDeLazer();
     }
+    dormir();
+  }
+
+  function dormir(){
+    alert("Você teve um dia incrível e está totalmente cansado(a). Está na hora de descansar!")
   }
   
   acordar();
