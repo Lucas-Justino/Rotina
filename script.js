@@ -25,13 +25,13 @@ function acordar() {
         alert("Vish. Você queria dormir mais 10 minutos e acabou dormindo a tarde inteira. Perdeu seu dia");
         break;
       case '2':
-        alert("Você começou a planejar o dia na mente.");
+        alert("Você começou a planejar o dia na mente. Depois de fazer seus planos, você levantou!");
+        levantar();
         break;
       default:
         alert("Escolha inválida!");
         continuarDeitado();
     }
-    levantar();
   }
   
   function verMensagens() {
@@ -40,18 +40,20 @@ function acordar() {
     switch (escolha) {
       case '1':
         alert("Você respondeu as mensagens importantes.");
+        levantar();
         break;
       case '2':
         alert("Você está checando seus e-mails e viu que tem uma oportunidade de entrevista de emprego.");
+        levantar();
         break;
       case '3':
         alert("Você verificou as redes sociais e agora está atrasado!");
+        arrumar()
         break;
       default:
         alert("Escolha inválida!");
         verMensagens();
     }
-    levantar();
   }
   
   function levantar() {
@@ -60,18 +62,52 @@ function acordar() {
     switch (escolha) {
       case '1':
         alert("Você tomou banho.");
+        arrumar();
         break;
       case '2':
         alert("Você está escovando os dentes.");
+        arrumar();
         break;
       case '3':
         alert("Você vai preparar o café da manhã.");
+        cafeDaManha()
         break;
       default:
         alert("Escolha inválida!");
         levantar();
     }
-    cafeDaManha();
+  }
+
+  function arrumar(){
+    let escolha = prompt("Você acabou de se arrumar e está pronto para o seu dia. Deseja tomar café?\n1 - Sim, adoraria tomar café\n2 - Não, estou atrasado.")
+    switch(escolha){
+      case "1":
+        cafeDaManha();
+        break;
+      case "2":
+        alert("Você decide por tomar café no caminho!");
+        decidir();
+        break;
+      default:
+        alert("Escolha inválida!");
+        arrumar();
+    }
+  }
+
+  function decidir(){
+    let escolha = prompt("Você quer trabalhar ou estudar?\n1 - Trabalhar\n2 - Estudar");
+    switch(escolha){
+      case "1":
+        alert("Está cheio de coisas para fazer no trabalho e está indo mais cedo!");
+        trabalhar()
+        break;
+      case "2":
+        estudar();
+        break;
+      default:
+        alert("Escolha inválida!");
+        decidir();
+    }
   }
 
   function cafeDaManha() {
@@ -91,11 +127,11 @@ function acordar() {
         alert("Escolha inválida!");
         cafeDaManha();
     }
-    estudar()
+    decidir();
   }
   
   function estudar() {
-    let escolha = prompt("Ocque você quer estudar?\n1 - JavaScript\n2 - TypeScript\n3 - React");
+    let escolha = prompt("O que você quer estudar?\n1 - JavaScript\n2 - TypeScript\n3 - React");
   
     switch (escolha) {
       case '1':
@@ -131,6 +167,7 @@ function acordar() {
         alert("Escolha inválida!");
         almocar();
     }
+    alert("Terminou seu almoço. Está pronto para ir para o trabalho!")
     trabalhar();
   }
   
